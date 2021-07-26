@@ -47,8 +47,9 @@ public class App {
 		// iv) Update the existing product by product ID
 		p500.setPrice(p500.getPrice() * 2);
 		manager.updateProduct(p500, p500.getProduct_id());
+		p500 = manager.getProductById(500l);
 		System.out.println("The 500th product's price has been doubled: " + p500);
-		System.out.println("App.main()");
+		System.out.println();
 
 		// v) Delete the product by ID
 		manager.deleteProductById(5l);

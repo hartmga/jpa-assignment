@@ -64,7 +64,7 @@ public class ProductManager {
 		Transaction tr = null;
 		try {
 			tr = session.beginTransaction();
-			session.save(p);
+			session.update(p);
 			tr.commit();
 		} catch (HibernateException e) {
 			tr.rollback();
